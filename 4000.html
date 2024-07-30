@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/4000.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tradez</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="picture/tradezgold logo-removebg.ico" />
+
+
+</head>
+<body>
+
+<img class="top-left" src="picture/Screenshot_2024-01-18_191454-removebg-preview.png" alt="logo" />
+
+<div class="heading">Tradez</div>
+
+<div class="search-container">
+  <input type="text" placeholder="Search..." id="searchInput" class="search-box" onkeyup="filterSuggestions()">
+  <div id="suggestions"></div>
+</div>
+
+<script>
+const suggestions = [
+  { name: "Plumber", url: "4000 Trades/4000plumbers.html" },
+  { name: "Electrician", url: "4000 Trades/4000electrical.html" },
+  // Add more suggestions here
+];
+
+function filterSuggestions() {
+  const input = document.getElementById('searchInput').value.toLowerCase();
+  const suggestionsContainer = document.getElementById('suggestions');
+
+  suggestionsContainer.innerHTML = '';
+  const filtered = suggestions.filter(suggestion => suggestion.name.toLowerCase().includes(input));
+
+  if (input === '' || filtered.length === 0) {
+    suggestionsContainer.style.display = 'none';
+    return;
+  }
+
+  filtered.forEach(item => {
+    const div = document.createElement('div');
+    div.textContent = item.name;
+    div.classList.add('suggestion-item');
+    div.onclick = function() {
+      window.location.href = item.url;
+    };
+    suggestionsContainer.appendChild(div);
+  });
+
+  suggestionsContainer.style.display = 'block';
+}
+
+function searchAction() {
+  // Implement the search action
+}
+</script>
+
+
+ <!-- Header -->
+ <header>
+  <div class="header-content">
+      <h1>Tradez</h1>
+      <p>Empowering Your Business with Innovative Trade Solutions</p>
+      <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+      </nav>
+      <div class="logo">
+        <img src="picture/tradezgold logo-removebg-preview.png" alt="Logo">
+    </div>
+  </div>
+</header>
+
+
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+
+      <div class="social-media">
+          <p><strong>Follow Us:</strong></p>
+          <p>
+              <a href="https://www.instagram.com/tradez">Instagram</a> |
+              <a href="https://www.twitter.com/tradez">Twitter</a>
+          </p>
+      </div>
+      <div class="newsletter">
+        <p>Do You Want Your Business To Be Taken To The Next level? <a href="rego.html">Register Here</a>.</p>
+      </div>
+      <p>© 2024 Tradez. All Rights Reserved.</p>
+  </div>
+</body>
+</html>
