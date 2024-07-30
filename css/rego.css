@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #73777a;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #333333;
+  color: white;
+  padding: 20px 0; /* Adjusted padding */
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.header-content h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.header-content p {
+  margin: 5px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #FFD700;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #333333;
+  color: white;
+  padding: 30px 0; /* Increased padding for more space */
+  text-align: center;
+  width: 100%;
+  margin-top: 30px; /* Add space between form and footer */
+}
+
+.footer-content h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+.footer-content p {
+  margin: 5px 0;
+}
+
+.footer-content a {
+  color: #FFD700;
+  text-decoration: none;
+}
+
+.social-media p,
+.newsletter p {
+  margin: 10px 0;
+}
+
+.social-media a {
+  margin: 0 10px;
+}
+
+.logo img {
+  height: 130px; /* Adjust as needed */
+  margin-left: 20px;
+}
+
+.logo {
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  left: 10px; /* Adjust as needed */
+}
+
+main {
+  margin: 70px 15px 15px; /* Adjusted top margin */
+  padding: 0;
+  box-sizing: border-box;
+  overflow-y: auto; /* Allows vertical scrolling */
+  display: flex;
+  justify-content: center; /* Centers the content horizontally */
+  flex: 1; /* Ensures main content area grows to fill space */
+}
+
+.form-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  margin-top: 100px; /* Increased margin-top to move form down more */
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.custom-button {
+  padding: 15px 30px;
+  background-color: #FFD700;
+  color: #000000;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  outline: none;
+  transition: 0.6s;
+}
+
+.custom-button:hover {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
